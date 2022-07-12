@@ -5,10 +5,6 @@ import time
 from tabulate import tabulate
 import pandas as pd
 import numpy as np
-<< << << < HEAD
-== == == =
->>>>>> > refactoring
-
 
 CITY_DATA = {'chicago': 'chicago.csv',
              'newyorkcity': 'new_york_city.csv',
