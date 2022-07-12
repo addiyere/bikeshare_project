@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+from tabulate import tabulate
 import time
 
 import re
@@ -269,18 +270,27 @@ def main():
         request_for_raw_data = input('Enter yes or no: ')
         request_for_raw_data = request_for_raw_data.replace(" ", "").lower()
         i = 0
-        Dataftame_of_five_rows = load_data(city, 'all', 'all')
-        while request_for_raw_data == 'yes' and (i+4 <= Dataftame_of_five_rows.index[-1]):
-            print('-'*160)
-            print(Dataftame_of_five_rows[i:i+5])
-            i = i + 5
-            if i+4 > Dataftame_of_five_rows.index[-1]:
-                print('\nYou have exhausted the number of rows in the dataframe.')
-            else:
-                request_for_raw_data = input(
-                    '\nDo you wish view the next first 5 rows of this dataframe? Enter yes or no: ')
-            request_for_raw_data = request_for_raw_data.replace(
-                " ", "").lower()
+        Dataframe_of_five_rows = load_data(city, 'all', 'all')
+        """ 
+        The following lines of code will have also been suggested by the reviewer.
+        This introduces pretty printing and makes the displayed results easier to read.
+        """
+        while True:
+            display_data = input(
+                '\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+            if display_data.lower() != 'yes':
+                break
+            print(
+                tabulate(Dataframe_of_five_rows.iloc[np.arange(0+i, 5+i)], headers="keys"))
+            i += 5
+        print('-'*160)
+        print(f'\nHere are some statistics for {city1}.')
+        print('-'*80)
+
+        time_stats(df)
+        station_stats(df)
+        trip_duration_stats(df)
+        user_stats(df)
         print('-'*160)
         print(f'\nHere are some statistics for {city1}.')
         print('-'*80)
