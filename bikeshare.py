@@ -2,7 +2,7 @@
 
 import pandas as pd
 import numpy as np
-import time 
+import time
 
 import re
 
@@ -12,6 +12,7 @@ CITY_DATA = {'chicago': 'chicago.csv',
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june']
 WEEK_DAYS = ['monday', 'tuesday', 'wednesday',
              'thursday', 'friday', 'saturday', 'sunday']
+
 
 def get_filters():
     """
@@ -80,6 +81,13 @@ def get_filters():
 
     print('-'*80)
     return city, month, day
+
+
+"""
+The reviewer has suggested that this get_filters() definition can be written
+in fewer lines to avoid repetition. Hence at some point in future I will do
+some refactoring to improve this definition.
+"""
 
 
 def load_data(city, month, day):
