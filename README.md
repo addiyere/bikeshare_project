@@ -23,7 +23,7 @@ This following is a list of online resources I used to writing this program.
 3. Extracting mode for a combination of 2 columns - https://stackoverflow.com/questions/53037698/how-can-i-find-the-most-frequent-two-column-combination-in-a-dataframe-in-python
 4. Obtaing the last index of a dataframe - https://stackoverflow.com/questions/32341797/access-last-index-value-of-dataframe
 Mode over 2 columns - https://stackoverflow.com/questions/53037698/how-can-i-find-the-most-frequent-two-column-combination-in-a-dataframe-in-python
-Error handling - https://www.youtube.com/watch?v=fhxByMe0mq8
-Pandas - https://www.youtube.com/watch?v=vmEHCJofslg
-Basic overview of python - https://www.youtube.com/watch?v=bY6m6_IIN94&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-
+5. Error handling - https://www.youtube.com/watch?v=fhxByMe0mq8
+6. Pandas - https://www.youtube.com/watch?v=vmEHCJofslg
+7. Basic overview of python - https://www.youtube.com/watch?v=bY6m6_IIN94&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-
 
